@@ -17,7 +17,7 @@
 package org.springframework.samples.petclinic;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 import java.util.Arrays;
@@ -80,8 +80,7 @@ public class PostgresIntegrationTests {
 
 	@Test
 	void testFindAll() throws Exception {
-		assertNull(vets.findAll()); // JUnit assertion
-		assertThat(vets.findAll()).isNull(); // Fest assertio
+		assertNotNull(vets.findAll());
 	}
 
 	@Test

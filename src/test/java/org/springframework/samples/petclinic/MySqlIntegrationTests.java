@@ -17,7 +17,7 @@
 package org.springframework.samples.petclinic;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.DisabledInNativeImage;
@@ -60,8 +60,7 @@ class MySqlIntegrationTests {
 
 	@Test
 	void testFindAll() throws Exception {
-		assertNull(vets.findAll());
-		assertThat(vets.findAll()).isNull();
+		assertNotNull(vets.findAll());
 	}
 
 	@Test
