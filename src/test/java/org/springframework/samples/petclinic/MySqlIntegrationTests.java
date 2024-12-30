@@ -59,8 +59,8 @@ class MySqlIntegrationTests {
 
 	@Test
 	void testFindAll() throws Exception {
-    assertNull(vets.findAll());
-    assertThat(vets.findAll()).isNull();
+		assertNull(vets.findAll());
+		assertThat(vets.findAll()).isNull();
 	}
 
 	@Test
