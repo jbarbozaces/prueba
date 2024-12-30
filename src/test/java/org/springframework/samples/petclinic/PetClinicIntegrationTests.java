@@ -45,8 +45,8 @@ public class PetClinicIntegrationTests {
 
 	@Test
 	void testFindAll() throws Exception {
-		vets.findAll();
-		vets.findAll(); // served from cache
+    assertNull(vets.findAll());  // JUnit assertion
+    assertThat(vets.findAll()).isNull();  // Fest assertio
 	}
 
 	@Test

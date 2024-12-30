@@ -59,8 +59,8 @@ class MySqlIntegrationTests {
 
 	@Test
 	void testFindAll() throws Exception {
-		vets.findAll();
-		vets.findAll(); // served from cache
+    assertNull(vets.findAll());
+    assertThat(vets.findAll()).isNull();
 	}
 
 	@Test
